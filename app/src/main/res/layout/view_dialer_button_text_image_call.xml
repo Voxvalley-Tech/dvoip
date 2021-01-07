@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:gravity="center"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/view_dialer_button_image_imageView"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:background="@drawable/dialpad_call_selector" >
+    </ImageView>
+
+    <com.vx.utils.CustomfontTextview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/_5dp"
+        android:text="Call"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_20sp"
+        android:textStyle="normal"
+        foo:customFont="Roboto-Regular_5.ttf">
+    </com.vx.utils.CustomfontTextview>
+
+</LinearLayout>

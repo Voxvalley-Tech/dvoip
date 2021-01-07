@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dvoip</string>
+    <string name="app_name1">DVoIP</string>
+
+    <!-- AdMob keys -->
+    <!-- Production IDs-->
+    <string name="admob_app_ID">ca-app-pub-4278984194959354~3029285576</string>
+    <string name="ad_banner_id">ca-app-pub-4278984194959354/1204728706</string>
+    <!-- TEST IDs -->
+    <!--<string name="ad_banner_id">ca-app-pub-3940256099942544/6300978111</string>-->
+
+    <!-- Login Page -->
+    <string name="brandpin_hint">Brandpin*</string>
+    <string name="username_hint">User Name</string>
+    <string name="password_hint">Password</string>
+    <string name="phonnumber_hint">Phone number (Optional)</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="register_btn">Register</string>
+
+    <!-- Recents Page -->
+
+    <string name="recents_title">RECENTS</string>
+    <string name="recents_details_title">CALL LOG DETAILS</string>
+
+    <!-- Contacts Page -->
+
+    <string name="contacts_title">CONTACTS</string>
+    <string name="search_hint_txt">Search...</string>
+
+    <!-- Calling page -->
+
+
+    <string name="mobile">Mobile</string>
+    <string name="home">Home</string>
+    <string name="work">Work</string>
+    <string name="fax">Fax</string>
+    <string name="pager">Pager</string>
+    <string name="other">Other</string>
+
+    <string name="play_store_new_version_alert">A new version is available, \n Do you want to update?</string>
+    <string name="nocontacts_message">No Contacts Found</string>
+    <string name="ongoing_call">Call in Progress</string>
+    <string name="reconnecting">Reconnecting</string>
+    <string name="missed_call">Missed call</string>
+
+    <!-- Conference -->
+
+    <string name="conference_name">Conference</string>
+    <string name="speaker">Speaker</string>
+    <string name="hold">Hold</string>
+    <string name="mute">Mute</string>
+    <string name="keypad">Keypad</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="swap">Swap</string>
+
+    <!-- Notificaitons -->
+    <string name="notification_register">Registered</string>
+    <string name="notification_not_register">Not Registered</string>
+    <!-- XMPP -->
+
+
+    <!-- Presence stuff -->
+
+    <!-- Connection state -->
+
+    <!-- Global Strings -->
+    <!-- tooltip message when the user entered an invalid XMPP address -->
+
+    <!-- FirstStartUpDialog -->
+
+    <!-- Notifications -->
+
+    <!-- Notifications -->
+
+    <!-- Notification Settings -->
+
+    <!-- Startup Setting Strings -->
+
+    <!-- Appearence Strings -->
+    <!--
+	<string name="FontRost_title">Roster font size</string>
+	<string name="FontRost_summ">Set roster font size</string>
+	<string name="FontRost_dialog">Roster font fize</string>
+	<string name="setFontRoster">Set roster font size</string>
+	-->
+
+    <!-- Mainmenu 	-->
+
+    <!-- AddFriend -->
+
+    <!-- Roster CONTEXTMENU -->
+
+    <!-- Accountprefs -->
+
+    <!-- accountprefs -->
+
+    <!--StatusPopUp-->
+
+    <!-- CHATWINDOW -->
+    <!-- Chat menu -->
+
+    <!-- GPS settings -->
+    <!--
+	<string name="showGPS_title">GPS to status</string>
+	<string name="showGPS_summ_on">GPS is send to StatusMessage</string>
+	<string name="showGPS_summ_off">GPS is send to StatusMessage</string>
+	-->
+
+    <!-- About Dialog -->
+
+    <!--<string name="status_available">Online</string>
+    <string name="status_away">Away</string>
+    <string name="status_chat">Free for chat</string>
+    <string name="status_dnd">Do not disturb</string>
+    <string name="status_xa">Not available</string>
+    <string name="status_offline">Offline</string>-->
+
+    <!-- default roster group with no name -->
+
+    <!-- SEND listener popup -->
+
+
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017 Voxvalley, http://voxvalley.com/
+  ~ All Right Reserved,
+  ~  <p>
+  ~ NOTICE:  All information contained herein is, and remains the property of
+  ~ Voxvalley and its suppliers, if any.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_roundedcorner_shape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@drawable/dialog_rounded_corner_top_shape"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:text="Put on Hold"
+            android:textColor="@color/dialog_title_textcolor"
+            android:textSize="@dimen/text_20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/split_close_layout"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/close_normal" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/split_first_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_10dp"
+        android:text="8801261390"
+        android:textColor="@color/contacts_listitem_number_color" />
+
+    <TextView
+        android:id="@+id/split_second_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_10dp"
+        android:text="8801261390"
+        android:textColor="@color/contacts_listitem_number_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_button_selector"
+            android:gravity="center"
+            android:text="OK"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_button_selector"
+            android:gravity="center"
+            android:text="CANCEL"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

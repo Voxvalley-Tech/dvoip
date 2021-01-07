@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <LinearLayout
+           android:id="@+id/topLayout"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_marginTop="@dimen/_10dp"
+           android:orientation="vertical"
+           android:weightSum="2">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_10dp"
+               android:orientation="vertical"
+               android:weightSum="4">
+               <com.google.android.gms.ads.AdView
+                   xmlns:ads="http://schemas.android.com/apk/res-auto"
+                   android:id="@+id/adView"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_50dp"
+                   ads:adSize="BANNER"
+                   android:visibility="gone"
+                   ads:adUnitId="@string/ad_banner_id">
+               </com.google.android.gms.ads.AdView>
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/contact_photo"
+                   android:layout_width="@dimen/_150dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_height="@dimen/_150dp"
+                   android:padding="@dimen/_10dp"
+                   android:src="@drawable/ic_calling_avatar" />
+               <com.vx.utils.CustomfontTextview
+                   android:id="@+id/incall_contact_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_40dp"
+                   android:layout_marginRight="@dimen/_40dp"
+                   android:layout_weight="1"
+                   android:layout_marginTop="@dimen/_10dp"
+                   android:ellipsize="marquee"
+                   android:focusable="true"
+                   android:focusableInTouchMode="true"
+                   android:gravity="center"
+                   android:marqueeRepeatLimit="marquee_forever"
+                   android:scrollHorizontally="true"
+                   android:singleLine="true"
+                   android:text="Contact Name"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/text_22sp"
+                   android:textStyle="bold"
+                   foo:customFont="Roboto-Medium_5.ttf" />
+
+               <com.vx.utils.CustomfontTextview
+                   android:id="@+id/incall_contact_number"
+                   android:layout_width="fill_parent"
+                   android:layout_height="0dp"
+                   android:layout_marginLeft="@dimen/_40dp"
+                   android:layout_marginRight="@dimen/_40dp"
+                   android:layout_weight="1"
+                   android:ellipsize="marquee"
+                   android:focusable="true"
+                   android:focusableInTouchMode="true"
+                   android:gravity="center"
+                   android:layout_marginTop="@dimen/_5dp"
+                   android:marqueeRepeatLimit="marquee_forever"
+                   android:scrollHorizontally="true"
+                   android:singleLine="true"
+                   android:text="Contact Number"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/text_20sp"
+                   android:visibility="gone"
+                   foo:customFont="Roboto-Regular_5.ttf" />
+
+               <com.vx.utils.CustomfontTextview
+                   android:id="@+id/incall_callstatuscode"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:text="Calling..."
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/text_18sp"
+                   android:textStyle="normal"
+                   foo:customFont="Roboto-Regular_5.ttf" />
+               <Chronometer
+                   android:layout_marginTop="@dimen/_5dp"
+                   android:id="@+id/incall_elapsedTime"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/text_18sp"
+                   android:textStyle="normal"
+                   android:visibility="invisible" />
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_centerInParent="true"
+           android:layout_weight="1"
+           android:gravity="center"
+           android:layout_below="@+id/topLayout"
+           android:layout_marginBottom="@dimen/_10dp"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="@dimen/_20dp"
+               android:layout_marginRight="@dimen/_20dp"
+               android:fadingEdge="none"
+               android:isScrollContainer="false"
+               android:orientation="vertical"
+               tools:ignore="UselessParent">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerHorizontal="true"
+                   android:layout_gravity="center_vertical"
+                   android:orientation="vertical"
+                   android:scaleType="fitCenter"
+                   android:weightSum="12">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:clickable="true"
+                           android:gravity="center"
+                           android:orientation="vertical">
+
+                           <ImageView
+                               android:id="@+id/incall_mute_img"
+                               android:layout_width="@dimen/_50dp"
+                               android:layout_height="@dimen/_50dp"
+                               android:background="@drawable/incall_mute_bg"
+                               android:clickable="false" />
+
+                           <com.vx.utils.CustomfontTextview
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Mute"
+                               android:textColor="@color/incall_buttons_color_bg"
+                               android:textSize="@dimen/text_18sp"
+                               foo:customFont="Roboto-Regular_5.ttf" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginRight="@dimen/_10dp"
+                           android:layout_weight="1"
+                           android:clickable="true"
+                           android:gravity="center"
+                           android:orientation="vertical">
+
+                           <ImageView
+                               android:id="@+id/incall_keypad_img"
+                               android:layout_width="@dimen/_50dp"
+                               android:layout_height="@dimen/_50dp"
+                               android:background="@drawable/sel_key"
+                               android:clickable="false" />
+
+                           <com.vx.utils.CustomfontTextview
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Keypad"
+                               android:textColor="@color/incall_buttons_color_bg"
+                               android:textSize="@dimen/text_18sp"
+                               foo:customFont="Roboto-Regular_5.ttf" />
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:clickable="true"
+                           android:gravity="center"
+                           android:orientation="vertical">
+
+                           <ImageView
+                               android:id="@+id/incallhold_img"
+                               android:layout_width="@dimen/_50dp"
+                               android:layout_height="@dimen/_50dp"
+                               android:background="@drawable/sel_hold"
+                               android:clickable="false" />
+
+                           <com.vx.utils.CustomfontTextview
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Hold"
+                               android:textColor="@color/incall_buttons_color_bg"
+                               android:textSize="@dimen/text_18sp"
+                               foo:customFont="Roboto-Regular_5.ttf" />
+                       </LinearLayout>
+
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_30dp"
+                       android:layout_marginLeft="@dimen/_30dp"
+                       android:layout_marginRight="@dimen/_30dp"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:clickable="true"
+                           android:gravity="center"
+                           android:orientation="vertical">
+
+                           <ImageView
+                               android:id="@+id/incallspeaker_img"
+                               android:layout_width="@dimen/_50dp"
+                               android:layout_height="@dimen/_50dp"
+                               android:clickable="false"
+                               android:src="@drawable/incall_speaker_bg" />
+
+                           <com.vx.utils.CustomfontTextview
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Speaker"
+                               android:textColor="@color/incall_buttons_color_bg"
+                               android:textSize="@dimen/text_18sp"
+                               foo:customFont="Roboto-Regular_5.ttf" />
+                       </LinearLayout>
+
+
+
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:clickable="true"
+                           android:gravity="center"
+                           android:orientation="vertical">
+
+                           <ImageView
+                               android:id="@+id/incallbluetooth_img"
+                               android:layout_width="@dimen/_50dp"
+                               android:layout_height="@dimen/_50dp"
+                               android:background="@drawable/incall_bluetooth_selector"
+                               android:clickable="false" />
+
+                           <com.vx.utils.CustomfontTextview
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Bluetooth"
+                               android:textColor="@color/incall_buttons_color_bg"
+                               android:textSize="@dimen/text_18sp"
+                               foo:customFont="Roboto-Regular_5.ttf" />
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_10dp"
+                   android:layout_gravity="center"
+                   android:layout_marginBottom="@dimen/_10dp"
+                   android:orientation="horizontal"
+                   android:padding="@dimen/_10dp"
+                   android:weightSum="2">
+                   <Button
+                       android:id="@+id/incall_answercall_img"
+                       android:layout_width="fill_parent"
+                       android:layout_height="fill_parent"
+                       android:layout_weight="1"
+                       android:background="@drawable/incall_answercall_bg"
+                       android:clickable="true"
+                       android:text="Answer"
+                       android:textColor="@android:color/white"
+                       android:textSize="18dp"
+                       android:visibility="gone" />
+                   <ImageView
+                       android:id="@+id/incall_endcall_img"
+                       android:layout_width="@dimen/_60dp"
+                       android:layout_height="@dimen/_60dp"
+                       android:layout_weight="1"
+                       android:clickable="true"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:background="@drawable/incall_endcall_selector"
+                       android:visibility="visible" />
+
+               </LinearLayout>
+           </LinearLayout>
+
+
+       </LinearLayout>
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sensor_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.dvoip"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- Fore ground service permission -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- This permission required to keep calling screen active -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- It disables the lock while user in call -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- It enables all permissions by default from Marshmallow -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_circle"
+        android:label="@string/app_name1"
+        android:screenOrientation="portrait"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppBaseTheme">
+
+        <!-- android:debuggable="true"> -->
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2facee391d58b100e793ac20edd0f0390e691d82" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_ID"/>
+
+        <!-- SPlash -->
+        <activity
+            android:name="com.vx.ui.SplashActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login -->
+        <activity
+            android:name="com.vx.ui.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name="com.vx.ui.Home"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- Contacts details activity -->
+        <activity
+            android:name="com.vx.ui.contacts.ContactsDetailsActivity"
+            android:theme="@style/AppBaseThemeAcivity"
+            android:screenOrientation="portrait" />
+
+        <!-- call log details -->
+        <activity
+            android:name="com.vx.ui.recents.RecentDetailsActivity"
+            android:theme="@style/AppBaseThemeAcivity"
+            android:screenOrientation="portrait" />
+
+        <!-- InCall -->
+        <activity
+            android:name="com.vx.ui.incall.InCallCardActivity"
+            android:screenOrientation="portrait" />
+        <!-- Media Controller -->
+        <activity
+            android:name="com.vx.ui.incall.InCallMediaControl"
+            android:configChanges="orientation"
+            android:label="Media"
+            android:taskAffinity="com.vx.ui.incall.InCallCardActivity"
+            android:theme="@style/DarkTheme.Dialog" />
+
+        <!-- Network Receiver -->
+
+        <receiver
+            android:name="com.vx.core.android.callback.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.vx.core.android.receivers.ForegroundNotificationReceiver"/>
+        <service android:name="com.vx.core.android.service.NotificationService" />
+        <service android:name="com.vx.core.android.service.OpxmlService" />
+        <service
+            android:name="com.vx.core.android.service.RecentCloseService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.vx.utils.RecentCloseService" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.vx.core.android.service.SIPService" />
+        <service
+            android:name="com.vx.core.android.service.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name="com.vx.ui.incall.ConferenceActivity"
+            android:screenOrientation="portrait"></activity>
+
+    </application>
+
+</manifest>

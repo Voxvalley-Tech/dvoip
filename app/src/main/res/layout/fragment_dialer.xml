@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55dp"
+        android:background="#aa4a9b"
+        android:orientation="vertical">
+
+        <com.vx.utils.CustomfontTextview
+            android:id="@+id/dialpad_header"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="header"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold"
+            foo:customFont="Roboto-Regular_5.ttf" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#f5f5ff"
+        android:layout_weight="1.3"
+        android:weightSum="3"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.5"
+            android:layout_marginBottom="8dp"
+            android:gravity="bottom"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:visibility="gone" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/dialpad_feedback_img"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:visibility="gone" >
+            </ImageView>
+
+            <com.vx.ui.dialpad.DigitsEditText
+                android:id="@+id/screen_tab_dialer_editText_number"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:digits="0123456789*#"
+                android:inputType="number"
+                android:editable="false"
+                android:textIsSelectable="true"
+                android:freezesText="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLength="25"
+                android:nextFocusRight="@+id/accountChooserButton"
+                android:scrollHorizontally="false"
+                android:textAppearance="@style/DialtactsDigitsTextAppearance"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5dp" >
+
+                <com.vx.utils.CustomfontTextview
+                    android:id="@+id/balace_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left"
+                    android:maxLength="50"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="fsdgsdgsd"
+                    android:textColor="@color/reg_button_normal"
+                    android:textSize="@dimen/text_16sp"
+                    android:textStyle="bold"
+                    foo:customFont="Roboto-Regular_5.ttf" />
+
+                <com.vx.utils.CustomfontTextview
+                    android:id="@+id/registration_status_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:ellipsize="marquee"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:gravity="right|center"
+                    android:singleLine="true"
+                    android:text="fsdgsdgsd"
+                    android:textColor="@color/reg_button_normal"
+                    android:textSize="@dimen/text_16sp"
+                    foo:customFont="Roboto-Regular_5.ttf"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/dialpad_droapdown_width"
+        android:layout_height="@dimen/dialpad_droapdown_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/dialpad_droapdown_bgcolor"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="Select Account"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dialpad_droapdown_textsize"
+        android:visibility="gone" />
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="@color/black"></View>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.58"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10dp"
+        android:weightSum="12"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginTop="@dimen/_5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_1"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center" />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_2"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_45dp"
+                android:layout_marginRight="@dimen/_45dp" />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_3"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            >
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_4"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_5"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_45dp"
+                android:layout_marginRight="@dimen/_45dp"
+                />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_6"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center">
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_7"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_8"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_45dp"
+                android:layout_marginRight="@dimen/_45dp"
+                />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_9"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_star"
+                layout="@layout/dialer_digits_star_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_0"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_45dp"
+                android:layout_marginRight="@dimen/_45dp"
+                />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_sharp"
+                layout="@layout/dialer_digits_layout_bg"
+                android:layout_width="@dimen/_55dp"
+                android:layout_height="@dimen/_55dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_margin="3dp" />
+
+        <com.vx.utils.CustomfontTextview
+            android:id="@+id/dialpad_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="9dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#2064A7"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            foo:customFont="Roboto-Regular_5.ttf" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:layout_marginRight="@dimen/_15dp"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <include
+                android:visibility="visible"
+                android:id="@+id/screen_tab_dialer_button_video"
+                layout="@layout/view_dialer_button_text_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2" />
+
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_audio"
+                layout="@layout/view_dialer_button_text_image_call"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:clickable="true" />
+
+            <include
+                android:id="@+id/screen_tab_dialer_button_del"
+                layout="@layout/view_dialer_button_text_image_del"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"></View>
+    </LinearLayout>
+
+</LinearLayout>

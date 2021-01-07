@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+// Put Fabric plugin after Android plugin
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.app.dvoip"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode = 1
+        versionName = "1.0"
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.gms:play-services-ads:18.2.0'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.wang.avi:library:2.1.3'
+    // Version Check from play store
+    implementation 'org.jsoup:jsoup:1.10.3'
+    // Crashlatics integration
+
+}

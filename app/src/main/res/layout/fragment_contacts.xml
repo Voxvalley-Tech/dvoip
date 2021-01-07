@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/profile_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/background_top">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true" />
+
+        <com.vx.utils.CustomfontTextview
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/contacts_title"
+            android:textColor="@color/header_clr"
+            android:textSize="@dimen/text_23sp"
+            foo:customFont="Roboto-Medium_5.ttf" />
+
+        <Button
+            android:id="@+id/contacts_addcontact_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/contacts_addcontact_bg"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchbar_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/contacts_searchbar_height"
+        android:layout_below="@+id/profile_header">
+
+        <com.vx.utils.CustomfontEdittextview
+            android:id="@+id/contacts_searchbar_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/contacts_searchbar_edit_margin_left"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="@dimen/contacts_searchbar_edit_drawable_padding"
+            android:drawableTint="@color/black"
+            android:ems="10"
+            android:hint="@string/search_hint_txt"
+            android:imeOptions="actionDone"
+            android:lines="1"
+            android:paddingRight="@dimen/contacts_searchbar_edit_padding_right"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <com.vx.utils.CustomfontTextview
+        android:id="@+id/appnocontacts_found_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchbar_relative"
+        android:layout_marginTop="@dimen/contacts_listview_item_nocontactsfound_margintop"
+        android:gravity="center"
+        android:text="@string/nocontacts_message"
+        android:textColor="@color/contacts_nocontacts_textcolor"
+        android:textSize="@dimen/contacts_listview_item_nocontactsfound_textsize"
+        foo:customFont="Raleway-Light.ttf" />
+
+    <com.vx.utils.CustomfontTextview
+        android:id="@+id/nocontacts_found_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchbar_relative"
+        android:layout_marginTop="@dimen/contacts_listview_item_nocontactsfound_margintop"
+        android:gravity="center"
+        android:text="@string/nocontacts_message"
+        android:textColor="@color/contacts_nocontacts_textcolor"
+        android:textSize="@dimen/contacts_listview_item_nocontactsfound_textsize"
+        foo:customFont="OpenSans-Regular.ttf" />
+
+    <ListView
+        android:id="@+id/contacts_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/searchbar_relative"
+        android:cacheColorHint="#ffffff"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:isScrollContainer="false"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"></ListView>
+
+    <ListView
+        android:id="@+id/applicationcontacts_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/searchbar_relative"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:isScrollContainer="false"
+        android:paddingLeft="@dimen/contacts_listview_padding_left"
+        android:paddingRight="@dimen/contacts_listview_padding_right"
+        android:visibility="gone"></ListView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/contacts_bottom_bar_height"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.85"
+        android:background="@color/black"
+        android:visibility="gone">
+
+        <com.vx.utils.CustomfontTextview
+            android:id="@+id/contacts_mosip_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="MoSIP C5"
+            android:textColor="@color/contacts_bottom_tv__selected_color"
+            android:textSize="@dimen/contacts_bottom_tv_textsize"
+            foo:customFont="Raleway-Bold.ttf" />
+
+        <com.vx.utils.CustomfontTextview
+            android:id="@+id/contacts_native_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center|center_vertical"
+            android:text="All"
+            android:textColor="@color/contacts_bottom_tv__selected_color"
+            android:textSize="@dimen/contacts_bottom_tv_textsize"
+            foo:customFont="Raleway-Bold.ttf" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/contacts_addcontact_bg"
+        android:visibility="invisible" />
+
+</RelativeLayout>

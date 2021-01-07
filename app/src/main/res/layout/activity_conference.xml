@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017 Voxvalley, http://voxvalley.com/
+  ~ All Right Reserved,
+  ~  <p>
+  ~ NOTICE:  All information contained herein is, and remains the property of
+  ~ Voxvalley and its suppliers, if any.
+  ~
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vx.ui.incall.ConferenceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_230dp"
+        android:background="@color/background_top">
+
+        <ImageView
+            android:id="@+id/conference_contact_photo"
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/conference_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/conference_contact_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/conference_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18sp" />
+
+        <Chronometer
+            android:id="@+id/conference_elapsedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/conference_contact_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_15sp" />
+
+        <TextView
+            android:id="@+id/call_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conference_elapsedTime"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-light"
+            android:text="Calling..."
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/merge_option_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_180dp">
+
+        <ImageView
+            android:id="@+id/conference_merge_img"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:visibility="invisible"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/conference_split_img"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:clickable="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/merge_option_relative">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/conference_end_call_img"
+            android:gravity="center">
+            <!-- conference firstRow -->
+            <LinearLayout
+                android:id="@+id/conference_options_firstRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <!-- conference speaker -->
+                <LinearLayout
+                    android:id="@+id/conference_speaker_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/conference_speaker_img"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/dialpad_digits_drawable_selector"
+                        android:padding="@dimen/_10dp"
+                        android:src="@drawable/incall_speaker_selector" />
+
+                    <TextView
+                        android:id="@+id/conference_speaker_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:text="@string/speaker"
+                        android:textColor="@drawable/incall_buttons_color_selector"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+                <!-- conference speaker -->
+                <LinearLayout
+                    android:id="@+id/conference_keypad_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50dp"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/conference_keypad_img"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/dialpad_digits_drawable_selector"
+                        android:padding="@dimen/_10dp"
+                        android:src="@drawable/incall_keypad_selector" />
+
+                    <TextView
+                        android:id="@+id/conference_keypad_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:text="@string/keypad"
+                        android:textColor="@drawable/incall_buttons_color_selector"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+                <!-- conference mute -->
+                <LinearLayout
+                    android:id="@+id/conference_mute_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50dp"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/conference_mute_img"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/dialpad_digits_drawable_selector"
+                        android:padding="@dimen/_10dp"
+                        android:src="@drawable/incall_mute_selector" />
+
+                    <TextView
+                        android:id="@+id/conference_mute_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:text="@string/mute"
+                        android:textColor="@drawable/incall_buttons_color_selector"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- conference secondRow -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/conference_options_firstRow"
+                android:layout_marginTop="@dimen/_20dp"
+                android:gravity="center">
+                <!-- conference hold -->
+                <LinearLayout
+                    android:id="@+id/conference_hold_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/conference_hold_img"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/dialpad_digits_drawable_selector"
+                        android:padding="@dimen/_10dp"
+                        android:src="@drawable/incall_hold_selector" />
+
+                    <TextView
+                        android:id="@+id/conference_hold_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:text="@string/hold"
+                        android:textColor="@drawable/incall_buttons_color_selector"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/conference_swap_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/conference_swap_img"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/dialpad_digits_drawable_selector"
+                        android:padding="@dimen/_10dp" />
+
+                    <TextView
+                        android:id="@+id/conference_swap_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:text="@string/swap"
+                        android:textColor="@drawable/incall_buttons_color_selector"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+                <!-- conference bluetooth -->
+                <LinearLayout
+                    android:id="@+id/conference_bluetooth_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50dp"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/conference_bluetooth_img"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/dialpad_digits_drawable_selector"
+                        android:padding="@dimen/_10dp"
+                        android:src="@drawable/incall_bluetooth_selector" />
+
+                    <TextView
+                        android:id="@+id/conference_bluetooth_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:text="@string/bluetooth"
+                        android:textColor="@drawable/incall_buttons_color_selector"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/incal_att_transfer_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50dp"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:background="@drawable/dialpad_digits_drawable_selector"
+                        android:padding="@dimen/_15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Attd. Tansfer"
+                        android:textColor="@drawable/incall_buttons_color_selector"
+                        android:textSize="@dimen/text_14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/conference_end_call_img"
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_30dp"
+            android:background="@drawable/incall_endcall_selector"
+            android:padding="@dimen/_15dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

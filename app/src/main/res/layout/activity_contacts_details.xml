@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <!-- All the controls which are part of the pinned header are in this layout. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_top">
+
+            <ImageView
+                android:id="@+id/img_backbutton"
+                android:layout_width="@dimen/_25dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_margin="@dimen/_15dp"
+                android:background="@drawable/details_backbutton_selector"
+                android:visibility="visible" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/contact_details_photo_img"
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_toRightOf="@+id/img_backbutton"
+                android:background="@drawable/ic_contacts_avatar"
+                android:visibility="invisible" />
+
+            <com.vx.utils.CustomfontTextview
+                android:id="@+id/contact_details_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/_15dp"
+                android:layout_toRightOf="@+id/contact_details_photo_img"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Contact Name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20dp"
+                foo:customFont="OpenSans-Regular.ttf" />
+        </RelativeLayout>
+
+        <!--
+             <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/black" />    -->
+
+        <ListView
+            android:id="@+id/contactdetails_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/view_cntct_item"
+            android:dividerHeight="1px"
+            android:fadingEdge="none"
+            android:isScrollContainer="false"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<!--
+  ~ Copyright (c) 2017 Voxvalley, http://voxvalley.com/
+  ~ All Right Reserved,
+  ~  <p>
+  ~ NOTICE:  All information contained herein is, and remains the property of
+  ~ Voxvalley and its suppliers, if any.
+  ~
+  -->
+
+<resources>
+    <!--
+            Customize dimensions originally defined in res/values/dimens.xml (such as
+            screen margins) for large mobile in potrait here.
+       -->
+
+    <!-- Scaled pixel sizes for text view -->
+    <dimen name="text_11sp">16sp</dimen>
+    <dimen name="text_12sp">16sp</dimen>
+    <dimen name="text_13sp">17sp</dimen>
+    <dimen name="text_14sp">19sp</dimen>
+    <dimen name="text_15sp">21sp</dimen>
+    <dimen name="text_16sp">24sp</dimen>
+    <dimen name="text_17sp">25sp</dimen>
+    <dimen name="text_18sp">27sp</dimen>
+    <dimen name="text_19sp">28sp</dimen>
+    <dimen name="text_20sp">30sp</dimen>
+    <dimen name="text_22sp">33sp</dimen>
+    <dimen name="text_23sp">34sp</dimen>
+    <dimen name="text_30sp">45sp</dimen>
+    <dimen name="text_35sp">52sp</dimen>
+
+    <!-- All layouts dimensions -->
+    <dimen name="_1dp">1.5dp</dimen>
+    <dimen name="_2dp">3dp</dimen>
+    <dimen name="_3dp">4.5dp</dimen>
+    <dimen name="_5dp">7.5dp</dimen>
+    <dimen name="_7dp">10.5dp</dimen>
+    <dimen name="_8dp">12dp</dimen>
+    <dimen name="_10dp">15dp</dimen>
+    <dimen name="_15dp">22.5dp</dimen>
+    <dimen name="_17dp">25.5dp</dimen>
+    <dimen name="_20dp">30dp</dimen>
+    <dimen name="_25dp">38dp</dimen>
+    <dimen name="_30dp">45dp</dimen>
+    <dimen name="_35dp">52dp</dimen>
+    <dimen name="_40dp">60dp</dimen>
+    <dimen name="_45dp">68dp</dimen>
+    <dimen name="_50dp">75dp</dimen>
+    <dimen name="_55dp">85dp</dimen>
+    <dimen name="_60dp">90dp</dimen>
+    <dimen name="_70dp">105dp</dimen>
+    <dimen name="_80dp">120dp</dimen>
+    <dimen name="_100dp">150dp</dimen>
+    <dimen name="_150dp">225dp</dimen>
+    <dimen name="_180dp">270dp</dimen>
+    <dimen name="_230dp">345dp</dimen>
+    <dimen name="_280dp">400dp</dimen>
+    <dimen name="_300dp">450dp</dimen>
+
+
+</resources>

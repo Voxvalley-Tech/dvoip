@@ -1,0 +1,62 @@
+<!--
+  ~ Copyright (c) 2017 Voxvalley, http://voxvalley.com/
+  ~ All Right Reserved,
+  ~  <p>
+  ~ NOTICE:  All information contained herein is, and remains the property of
+  ~ Voxvalley and its suppliers, if any.
+  ~
+  -->
+
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 7" tablets) in potrait here.
+    -->
+
+    <!-- Scaled pixel sizes for text view -->
+    <dimen name="text_11sp">17sp</dimen>
+    <dimen name="text_12sp">16sp</dimen>
+    <dimen name="text_13sp">18sp</dimen>
+    <dimen name="text_14sp">20sp</dimen>
+    <dimen name="text_15sp">22sp</dimen>
+    <dimen name="text_16sp">25sp</dimen>
+    <dimen name="text_17sp">26sp</dimen>
+    <dimen name="text_18sp">28sp</dimen>
+    <dimen name="text_19sp">29sp</dimen>
+    <dimen name="text_20sp">31sp</dimen>
+    <dimen name="text_22sp">34sp</dimen>
+    <dimen name="text_23sp">35sp</dimen>
+    <dimen name="text_30sp">48sp</dimen>
+    <dimen name="text_35sp">55sp</dimen>
+
+    <!-- All layouts dimensions -->
+    <dimen name="_1dp">1.5dp</dimen>
+    <dimen name="_2dp">3dp</dimen>
+    <dimen name="_3dp">4.5dp</dimen>
+    <dimen name="_5dp">7.5dp</dimen>
+    <dimen name="_7dp">11dp</dimen>
+    <dimen name="_8dp">13dp</dimen>
+    <dimen name="_10dp">17dp</dimen>
+    <dimen name="_15dp">23dp</dimen>
+    <dimen name="_17dp">26dp</dimen>
+    <dimen name="_20dp">32dp</dimen>
+    <dimen name="_25dp">40dp</dimen>
+    <dimen name="_30dp">48dp</dimen>
+    <dimen name="_35dp">55dp</dimen>
+    <dimen name="_40dp">65dp</dimen>
+    <dimen name="_45dp">70dp</dimen>
+    <dimen name="_50dp">80dp</dimen>
+    <dimen name="_55dp">90dp</dimen>
+    <dimen name="_60dp">95dp</dimen>
+    <dimen name="_70dp">110dp</dimen>
+    <dimen name="_80dp">130dp</dimen>
+    <dimen name="_100dp">160dp</dimen>
+    <dimen name="_150dp">235dp</dimen>
+    <dimen name="_180dp">280dp</dimen>
+    <dimen name="_230dp">360dp</dimen>
+    <dimen name="_280dp">420dp</dimen>
+    <dimen name="_300dp">470dp</dimen>
+
+
+</resources>

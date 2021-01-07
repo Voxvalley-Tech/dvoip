@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="125dp"
+    android:background="@drawable/dialog_roundedcorner_shape"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_5dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.vx.utils.CustomfontTextview
+                android:id="@+id/tv_alert_title1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/dialog_title_textcolor"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:visibility="gone"
+                foo:customFont="Roboto-Regular_5.ttf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <com.vx.utils.CustomfontTextview
+                android:id="@+id/tv_alert_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginTop="10dp"
+                android:text="want to delete?fgvhfhghfghfghfg"
+                android:textColor="@color/dialog_message_textcolor"
+                android:textSize="@dimen/_15dp"
+                android:textStyle="normal"
+                foo:customFont="Roboto-Regular_5.ttf" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="horizontal"
+                android:paddingBottom="2sp" >
+
+                <Button
+                    android:id="@+id/btn_alert_ok"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="@dimen/_3dp"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/customshape_reg_btn"
+                    android:text="OK"
+                    android:gravity="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/_17dp"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btn_alert_ok_server"
+                    android:layout_width="@dimen/_80dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/customshape_reg_btn"
+                    android:text="OK"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_15dp"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btn_alert_cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/_2dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/customshape_reg_cancel"
+                    android:text="CANCEL"
+                    android:gravity="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/_15dp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

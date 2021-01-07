@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <!-- All the controls which are part of the pinned header are in this layout. -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/rl_top"
+            android:layout_width="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/_55dp"
+            android:background="@color/background_top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/_45dp"
+                android:layout_height="@dimen/_45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:padding="@dimen/_10dp"
+                android:src="@drawable/details_backbutton_selector" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="-5dp"
+                android:fontFamily="roboto"
+                android:gravity="center"
+                android:text="@string/recents_details_title"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/header_clr" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_backbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/backbutton_bg"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:src="@drawable/contacts_addcontact_bg"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/recents_details_photo_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_contacts_avatar"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- first call addcall row -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-26dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/recents_addcall_img"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/contacts_addcontact_bg" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/contacts_addcontact_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rel_cal_lay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_top"
+            android:background="@color/background_top"
+            android:weightSum="1">
+
+            <com.vx.utils.CustomfontTextview
+                android:id="@+id/recents_details_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.7"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center|left"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Contact Name"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_20dp"
+                foo:customFont="OpenSans-Regular.ttf" />
+
+            <Button
+                android:id="@+id/recents_call_img"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|center"
+                android:layout_weight="0.3"
+                android:background="#139f30"
+                android:clickable="true"
+                android:text="Call"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_20dp" />
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/recentsdetails_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/rel_cal_lay"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/view_cntct_item"
+            android:dividerHeight="1px"
+            android:paddingRight="@dimen/_10dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarSize="@dimen/_3dp"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbarThumbVertical="@color/scroller_view_color"
+            android:scrollbarTrackVertical="@color/scroller_view_end_color"
+            android:scrollbars="none" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

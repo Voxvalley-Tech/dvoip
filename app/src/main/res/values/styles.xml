@@ -1,0 +1,108 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    -->
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Main theme colors -->
+            <!-- darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <!-- Main theme colors -->
+        <!--   Branding color for the app bar -->
+        <item name="colorPrimary">@color/bg_top</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">@color/bg_top</item>
+    </style>
+
+    <style name="AppBaseThemeAcivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Main theme colors -->
+        <!-- darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <!-- Main theme colors -->
+        <!--   Branding color for the app bar -->
+        <item name="colorPrimary">@color/bg_top</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">@color/bg_top</item>
+    </style>
+
+    <style name="Theme" parent="android:Theme"></style>
+
+    <!-- Default toolbar text style-->
+
+    <style name="Theme.Dialog1" parent="Theme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--<style name="MoSIPTheme" parent="android:Theme.Light">
+        <item name="android:actionBarTabTextStyle">@style/CustomTabTextStyle</item>
+        <item name="actionBarTabTextStyle">@style/CustomTabTextStyle</item>
+        <item name="android:actionBarTabStyle">@style/FindMyTrainactionbartab</item>
+        <item name="actionBarTabStyle">@style/FindMyTrainactionbartab</item>
+        <item name="android:actionBarTabBarStyle">@style/ActionBarTab</item>
+        <item name="android:actionBarSize">50dp</item>
+
+        <item name="android:textColor">@android:color/holo_blue_light</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="android:Theme.Light">
+        <item name="android:textColor">@android:color/holo_blue_light</item>
+    </style>
+
+
+    &lt;!&ndash; style for the action bar tab text &ndash;&gt;
+    <style name="CustomTabTextStyle" parent="@android:style/TextAppearance.Holo">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/background</item>
+    </style>
+
+    <style name="ActionBarTab" parent="@android:style/Widget.Holo.ActionBar.TabBar">
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@color/background</item>
+        <item name="android:dividerPadding">2dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="FindMyTrainactionbartab">
+        <item name="android:background">@color/background_top</item>
+    </style>-->
+
+
+    <!-- dialog animation -->
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <!-- Animation for dialog box -->
+
+    <style name="DarkTheme.Dialog" parent="@android:style/Theme.Dialog">
+
+        <item name="android:windowNoTitle">false</item>
+
+    </style>
+
+    <style name="DialtactsDigitsTextAppearance">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textSize">@dimen/dialpad_digits_text_size</item>
+        <item name="android:freezesText">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:editable">true</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:layout_weight">0</item>
+    </style>
+
+</resources>

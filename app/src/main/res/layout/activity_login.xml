@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        android:gravity="center"
+        android:isScrollContainer="false"
+        android:paddingLeft="@dimen/_50dp"
+        android:paddingRight="@dimen/_50dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_register_logo" />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customshape_normal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp" />
+
+        <com.vx.utils.CustomfontEdittextview
+            android:id="@+id/login_brandpin_edt"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_40dp"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center|left"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textColor="@color/login_editext_text_color"
+            android:textColorHint="@color/login_edit_hint_color"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:background="@drawable/customshape_normal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/_7dp"
+            android:src="@drawable/ic_username" />
+
+        <com.vx.utils.CustomfontEdittextview
+            android:id="@+id/login_username_edt"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_40dp"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center|left"
+            android:hint="@string/username_hint"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@drawable/customshape_normal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/_7dp"
+            android:src="@drawable/ic_password" />
+
+        <com.vx.utils.CustomfontEdittextview
+            android:id="@+id/login_password_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40dp"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center|left"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:layout_weight="1"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_16sp" />
+        <CheckBox
+            android:id="@+id/showpwd_check"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30dp"
+            android:button="@drawable/checkbox_custom"
+            android:clickable="true"
+            android:layout_weight="0.3"
+            android:textColor="@color/show_pwd_clr"
+            android:textSize="@dimen/text_16sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+   <!-- <CheckBox
+        android:id="@+id/showpwd_check"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:button="@drawable/checkbox_custom"
+        android:clickable="true"
+        android:text="  Show Password"
+        android:textColor="@color/show_pwd_clr"
+        android:textSize="@dimen/text_16sp"
+        android:visibility="visible" />
+-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:background="@drawable/customshape_normal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/_7dp"
+            android:src="@drawable/ic_phone_number" />
+
+        <com.vx.utils.CustomfontEdittextview
+            android:id="@+id/login_phonenumber_edt"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_40dp"
+            android:background="@null"
+            android:digits="0123456789+"
+            android:ems="10"
+            android:gravity="center|left"
+            android:hint="@string/phonnumber_hint"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_16sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp">
+
+
+
+
+
+        <Button
+            android:id="@+id/login_cancel_button"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_toRightOf="@+id/customshape_reg_cancel"
+            android:layout_weight="1"
+            android:background="@drawable/customshape_login_cancel"
+            android:gravity="center"
+            android:text="@string/cancel_btn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/login_submit_button"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/customshape_reg_btn_above10"
+            android:gravity="center"
+            android:text="@string/register_btn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="Version*"
+        android:textColor="@color/version_clr"
+        android:textSize="@dimen/text_13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_1dp"
+        android:text="SDK Version: 1.7.3"
+        android:textColor="@color/version_clr"
+        android:textSize="@dimen/text_13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

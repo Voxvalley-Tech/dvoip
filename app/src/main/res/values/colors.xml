@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="version_color">#ffffff</color>
+    <color name="bg_top">#aa4a9b</color>
+    <color name="color_primary_dark">#973d89</color>
+    <!-- Page Stripper for view pager -->
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="pager_indicator_color">#eb1b45</color>
+
+    <!-- Login  -->
+
+    <color name="button_pressed">#761511</color>
+    <color name="button_normal">#C42821</color>
+
+
+    <!-- ******************************************-->
+
+    <color name="listitemselected_color">#33000000</color>
+    <color name="background_top">#aa4a9b</color>
+
+    <!-- Login -->
+    <color name="cancel_normal">#eb1b45</color>
+    <color name="cancel_pressed">#c81439</color>
+    <color name="reg_button_pressed">#c81439</color>
+    <color name="reg_button_normal">#eb1b45</color>
+    <color name="login_editext_text_color">#000000</color>
+    <color name="white">#FFFF</color>
+    <color name="black">#000000</color>
+    <color name="login_edit_hint_color">#000000</color>
+    <color name="login_edittext_bgcolor">#4Dffffff</color>
+    <color name="show_pwd_clr">#000000</color>
+    <color name="cancel_nrml">#eb1b45</color>
+    <color name="version_clr">#000000</color>
+
+
+    <!-- Dialpad -->
+    <color name="dail_btn_hover">#aa4a9b</color>
+    <color name="dialpad_digits_textcolor">#666666</color>
+    <color name="dialpad_droapdown_bgcolor">#2064a7</color>
+    <color name="header_clr">#ffffff</color>
+    <!-- Contacts -->
+    <color name="contacts_bottom_tv_selected_color">#e83438</color>
+    <color name="contacts_listitem_number_color">#ffffff</color>
+    <color name="contacts_nocontacts_textcolor">#000000</color>
+    <color name="view_cntct_item">#ffffff</color>
+
+    <!-- Recents -->
+    <color name="recents_bottom_tv_selected_color">#3170ae</color>
+    <!-- Records -->
+
+    <!-- Incall -->
+    <color name="incall_button_bg_normal_color">#80ffffff</color>
+    <color name="incall_button_bg_hover_color">#ffffff</color>
+    <color name="incall_button_text_normal_color">#000000</color>
+    <color name="incall_button_text_hover_color">#fac13b</color>
+    <color name="incall_answerbutton_normalcolor">#62cb56</color>
+    <color name="incall_answerbutton_hovercolor">#429f37</color>
+    <color name="incall_endcallbutton_normalcolor">#ed1b24</color>
+    <color name="incall_endcallbutton_hovercolor">#cc0a12</color>
+
+    <!-- Dialog -->
+    <color name="dialog_background_color">#f6f6f6</color>
+    <color name="dialog_buttonnormal">#2064A7</color>
+    <color name="dialog_buttonpressed">#0d4984</color>
+    <color name="dialog_title_textcolor">#FFFFFF</color>
+    <color name="dialog_message_textcolor">#000000</color>
+
+    <color name="scroller_view_end_color">#ffffff</color>
+    <color name="scroller_view_color">#fc4e2c</color>
+</resources>

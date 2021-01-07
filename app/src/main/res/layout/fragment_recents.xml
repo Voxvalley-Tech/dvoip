@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/profile_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/background_top">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:visibility="gone" />
+
+        <com.vx.utils.CustomfontTextview
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/recents_title"
+            android:textColor="@color/header_clr"
+            android:textSize="@dimen/text_23sp"
+            foo:customFont="Roboto-Medium_5.ttf" />
+
+        <ImageView
+            android:id="@+id/recents_removecalllogs_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_marginRight="@dimen/_10dp"
+            android:background="@null"
+            android:padding="@dimen/_7dp"
+            android:src="@drawable/recents_removecontact_bg"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/recents_topbar_height"
+        android:background="@color/background_top"
+        android:visibility="gone">
+
+        <com.vx.utils.CustomfontTextview
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Recents"
+            android:textColor="@color/white"
+            android:textSize="@dimen/recents_header_textsize"
+            foo:customFont="Raleway-Bold.ttf" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp" />
+    </RelativeLayout>
+
+    <com.vx.utils.CustomfontTextview
+        android:id="@+id/norecents_found_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_header"
+        android:layout_marginTop="@dimen/contacts_listview_item_nocontactsfound_margintop"
+        android:gravity="center"
+        android:text="No Call Logs found"
+        android:textColor="@color/contacts_nocontacts_textcolor"
+        android:textSize="@dimen/contacts_listview_item_nocontactsfound_textsize"
+        foo:customFont="Raleway-Light.ttf" />
+
+    <ListView
+        android:id="@+id/recents_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/profile_header"
+        android:cacheColorHint="#ffffff"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:isScrollContainer="false"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"></ListView>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/profile_header"
+        android:divider="@color/view_cntct_item"
+        android:fadingEdge="none"
+        android:isScrollContainer="false"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:visibility="gone"></ListView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/recents_bottom_bar_height"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.92"
+        android:background="@color/black"
+        android:visibility="gone">
+
+        <com.vx.utils.CustomfontTextview
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="All Calls"
+            android:textColor="@color/recents_bottom_tv__selected_color"
+            android:textSize="@dimen/recents_bottom_tv_textsize"
+            foo:customFont="Raleway-Bold.ttf" />
+
+        <com.vx.utils.CustomfontTextview
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center|center_vertical"
+            android:text="Missed Calls"
+            android:textColor="@color/recents_bottom_tv__selected_color"
+            android:textSize="@dimen/recents_bottom_tv_textsize"
+            foo:customFont="Raleway-Bold.ttf" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/recents_removecontact_bg"
+        android:visibility="invisible" />
+
+</RelativeLayout>

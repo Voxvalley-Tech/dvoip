@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017 Voxvalley, http://voxvalley.com/
+  ~ All Right Reserved,
+  ~  <p>
+  ~ NOTICE:  All information contained herein is, and remains the property of
+  ~ Voxvalley and its suppliers, if any.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_roundedcorner_shape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@drawable/dialog_rounded_corner_top_shape"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/add_call_heading_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:text="Add Call"
+            android:textColor="@color/dialog_title_textcolor"
+            android:textSize="@dimen/text_20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/close_add_call_layout"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/close_normal" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/phone_number_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_marginRight="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:cursorVisible="true"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Enter phone number"
+        android:inputType="phone"
+        android:maxLength="25"
+        android:nextFocusRight="@+id/accountChooserButton"
+        android:scrollHorizontally="false"
+        android:textColor="@color/dialpad_digits_textcolor"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/text_15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginRight="@dimen/_20dp"
+        android:background="#999999" />
+
+    <Button
+        android:id="@+id/add_call_ok_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_marginLeft="@dimen/_50dp"
+        android:layout_marginRight="@dimen/_50dp"
+        android:background="@drawable/dialog_button_selector"
+        android:gravity="center"
+        android:text="OK"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="@dimen/text_16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

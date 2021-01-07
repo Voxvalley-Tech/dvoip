@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- HDPI EX: S2 -->
+
+
+    <!-- splash page -->
+
+    <!-- loin page -->
+
+    <!-- Dialpad -->
+    <dimen name="dialpad_digits_text_size">20sp</dimen>
+    <dimen name="dialpad_droapdown_width">250dp</dimen>
+    <dimen name="dialpad_droapdown_height">35dp</dimen>
+    <dimen name="dialpad_droapdown_textsize">16sp</dimen>
+
+    <!-- Contacts -->
+    <dimen name="contacts_bottom_bar_height">45dp</dimen>
+    <dimen name="contacts_bottom_tv_textsize">18sp</dimen>
+    <dimen name="contacts_searchbar_height">60dp</dimen>
+    <dimen name="contacts_searchbar_edit_drawable_padding">10dp</dimen>
+    <dimen name="contacts_searchbar_edit_margin_left">10dp</dimen>
+    <dimen name="contacts_searchbar_edit_padding_right">10dp</dimen>
+    <dimen name="contacts_listview_padding_left">10dp</dimen>
+    <dimen name="contacts_listview_padding_right">10dp</dimen>
+    <dimen name="contacts_listview_item_textsize">18sp</dimen>
+    <dimen name="contacts_listview_item_marginleft">10dp</dimen>
+    <dimen name="contacts_listview_item_marginright">5dp</dimen>
+    <dimen name="contacts_listview_item_nocontactsfound_margintop">80dp</dimen>
+    <dimen name="contacts_listview_item_nocontactsfound_textsize">20sp</dimen>
+
+    <!-- Contact Details -->
+    <dimen name="contacts_details_listview_item_number_textsize">18sp</dimen>
+
+    <!-- Recents -->
+    <dimen name="recents_topbar_height">60dp</dimen>
+    <dimen name="recents_header_textsize">25sp</dimen>
+    <dimen name="recents_bottom_bar_height">45dp</dimen>
+    <dimen name="recents_bottom_tv_textsize">18sp</dimen>
+    <dimen name="recents_listview_profilepic_width">50dp</dimen>
+    <dimen name="recents_listview_profilepic_height">50dp</dimen>
+    <dimen name="recents_listview_item_textsize">18sp</dimen>
+
+    <!-- Recents Details -->
+
+    <!-- Records -->
+
+    <!-- Incall -->
+
+    <!-- More -->
+
+    <!-- Chat page -->
+
+</resources>
